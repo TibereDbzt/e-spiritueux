@@ -32,9 +32,9 @@
 
                 getDebug();
                 
-                require MODEL_PATH . 'Wine.model.php';
+                require MODEL_PATH . 'Product.model.php';
 
-                WineModel::test();
+                var_dump(WineModel::getAllProducts());
             ?>
         </main>
 
