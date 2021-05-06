@@ -1,3 +1,12 @@
+<?php
+    require_once './../app/app.php';
+
+    require_once MODEL_PATH . 'Category.model.php';
+
+    $categories = CategoryModel::getAllCategories();
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -39,6 +48,21 @@
                     <div class="image__container">
                         <img class="grape-image" src="./assets/images/grape.png" alt="grape">
                     </div>
+                </div>
+            </section>
+
+            <section class="section categories">
+                <h2 class="section__title">Découvrez nos produits</h2>
+                <div class="section__content">
+                    <?php
+                        foreach ($categories as $category) {
+                            echo '<a href="./products?category=' . $category->getCategoryId() . '"/>';
+                            echo '<div class="category__box">';
+                            echo '<h3 class="category__name">' . $category->getCategoryName() . '</h3>';
+                            echo '</div>';
+                            echo '</a>';
+                        }
+                    ?>
                 </div>
             </section>
 

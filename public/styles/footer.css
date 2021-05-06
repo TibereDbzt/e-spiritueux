@@ -31,3 +31,17 @@
 .table {
     margin-right: 10rem;
 }
+
+.table__title {
+    padding-bottom: 1rem;
+    font-size: 0.7rem;
+}
+
+.table__item {
+    font-family: 'Sackers Light';
+    font-size: 0.7rem;
+}
+
+.table__link {
+    padding: 1rem 0;
+}

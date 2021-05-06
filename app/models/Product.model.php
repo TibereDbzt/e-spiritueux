@@ -30,6 +30,7 @@ class ProductModel {
 
     public static function getAllProducts() {
         $request = Model::$pdo->query('SELECT * FROM products');
+        $request->setFetchMode(PDO::FETCH_CLASS, 'ProductModel');
         $products = $request->fetchAll();
         return $products;
     }

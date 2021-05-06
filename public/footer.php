@@ -9,17 +9,17 @@
             <div class="table">
                 <h4 class="table__title">pages</h4>
                 <ul class="table__list">
-                    <li class="table__item">home</li>
-                    <li class="table__item">produits</li>
-                    <li class="table__item">panier</li>
+                    <li class="table__item"><a class="table__link" href="#">home</a></li>
+                    <li class="table__item"><a class="table__link" href="#">produits</a></li>
+                    <li class="table__item"><a class="table__link" href="#">panier</a></li>
                 </ul>
             </div>
             <div class="table">
                 <h4 class="table__title">contact</h4>
                 <ul class="table__list">
-                    <li class="table__item">facebook</li>
-                    <li class="table__item">twitter</li>
-                    <li class="table__item">instagram</li>
+                    <li class="table__item"><a class="table__link" href="#">facebook</a></li>
+                    <li class="table__item"><a class="table__link" href="#">twitter</a></li>
+                    <li class="table__item"><a class="table__link" href="#">instagram</a></li>
                 </ul>
             </div>
         </div>

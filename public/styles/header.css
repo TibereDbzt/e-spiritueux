@@ -32,5 +32,26 @@
 }
 
 .nav__link {
+    position: relative;
     padding: 1rem 1.4rem;
+}
+
+.nav__link::after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: black;
+    transform: translate3d(-3px, 20px, 0);
+    opacity: 0;
+    transition: all 0.2s ease-out;
+}
+
+.nav__link:hover::after {
+    transform: translate3d(-3px, 0, 0);
+    opacity: 1;
 }

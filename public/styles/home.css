@@ -23,3 +23,14 @@
 .grape-image {
     transform: translateY(-80px);
 }
+
+.categories .section__content {
+    margin: 10rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.category__box {
+
+}
