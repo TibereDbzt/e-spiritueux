@@ -8,18 +8,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <!-- load a reset file to standardize browsers -->
     <link rel="stylesheet" href="./styles/reset.css">
+    <!-- generic styles -->
+    <link rel="stylesheet" href="./styles/global.css">
     <!-- specific styles -->
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/cart.css">
     <title>WineShop</title>
 </head>
 <body>
+    <div class="wrapper">
 
-    <?php
-        require_once './header.php';
-    ?>
-    
-    <h1>Page panier</h1>
+        <?php
+            require_once './header.php';
+        ?>
+        
+        <h1>Page panier</h1>
+        
+    </div>
     
     <!-- load bootstrap scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>

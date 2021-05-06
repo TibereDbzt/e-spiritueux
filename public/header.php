@@ -1,14 +1,14 @@
-<header>
-    <nav>
-        <ul>
-            <li>
-                <a href="./index.php">accueil</a>
+<header class="header">
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__entry">
+                <a class="nav__link" href="./index.php">accueil</a>
             </li>
-            <li>
-                <a href="./products.php">produits</a>
+            <li class="nav__entry">
+                <a class="nav__link" href="./products.php">produits</a>
             </li>
-            <li>
-                <a href="./cart.php">panier</a>
+            <li class="nav__entry">
+                <a class="nav__link" href="./cart.php">panier</a>
             </li>
         </ul>
     </nav>
