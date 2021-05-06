@@ -16,14 +16,18 @@
     <title>WineShop</title>
 </head>
 <body>
+
+    <?php
+        require_once './header.php';
+    ?>
+
     <div class="wrapper">
 
-        <?php
-            require_once './header.php';
-        ?>
-        
-        <h1>Page panier</h1>
-        
+        <main class="content">
+            <h2>Panier</h2>
+
+        </main>
+
     </div>
     
     <!-- load bootstrap scripts -->

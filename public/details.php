@@ -17,13 +17,16 @@
 </head>
 <body>
 
+    <?php
+        require_once './header.php';
+    ?>
+
     <div class="wrapper">
 
-        <?php
-            require_once './header.php';
-        ?>
-    
-        <h1>Fiche produit</h1>
+        <main class="content">
+            <h2>Détail du produit</h2>
+
+        </main>
 
     </div>
 

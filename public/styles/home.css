@@ -1,1 +1,25 @@
-/* styles de la page d'accueil (index.php)
+/* styles de la page d'accueil (index.php) */
+
+.hero {
+    height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.site-name {
+    font-family: 'Sackers Heavy';
+    font-size: 12rem;
+    padding-bottom: 2rem;
+    transform: translateX(-20px);
+    margin-top: -140px;
+}
+
+.about-us > .section__title {
+    font-family: 'Sackers Light';
+    transform: translateY(-60%);
+}
+
+.grape-image {
+    transform: translateY(-80px);
+}

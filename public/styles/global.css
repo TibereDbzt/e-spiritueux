@@ -20,6 +20,16 @@
 	src: url('./../assets/fonts/SackersGothicStd-Light.otf')
 }
 
+@font-face {
+	font-family: 'SangBleu';
+	font-weight: 500;
+	src: url('./../assets/fonts/SangBleuSunrise.otf')
+}
+
+html {
+	font-size: 14px;
+}
+
 body {
 	width: 100%;
 	min-height: 100vh;
@@ -27,8 +37,44 @@ body {
 }
 
 .wrapper {
+	position: relative;
     width: 100%;
     box-sizing: border-box;
-    padding-left: calc(50% - var(--container) / 2);
-    padding-right: calc(50% - var(--container) / 2);
+    /* padding-left: calc(50% - var(--container) / 2);
+    padding-right: calc(50% - var(--container) / 2); */
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.content {
+	margin-top: 140px;
+}
+
+.section {
+	width: 100%;
+	margin-bottom: 6rem;
+}
+
+.section__title {
+	font-size: 6rem;
+}
+
+.section__content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.section__description {
+	/* text-align: justify; */
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+p, li {
+	font-family: 'SangBleu';
+	font-size: 1rem;
+	line-height: 3rem;
 }

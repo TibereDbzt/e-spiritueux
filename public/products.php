@@ -17,25 +17,27 @@
 </head>
 <body>
 
+    <?php
+        require_once './header.php';
+    ?>
+
     <div class="wrapper">
 
-        <?php
-            require_once './header.php';
-        ?>
+        <main class="content">
+            <h2>Page produits</h2>
 
-        <h1>Page produits</h1>
+            <!-- exemple pour aller chercher tous les produits -->
+            <?php
+                require_once './../app/app.php';
 
-        <!-- exemple pour aller chercher tous les produits -->
-        <?php
-            require_once './../app/app.php';
+                getDebug();
+                
+                require MODEL_PATH . 'Wine.model.php';
 
-            getDebug();
-            
-            require MODEL_PATH . 'Wine.model.php';
+                WineModel::test();
+            ?>
+        </main>
 
-            WineModel::test();
-        ?>
-        
     </div>
 
     <!-- load bootstrap scripts -->
