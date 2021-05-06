@@ -3,7 +3,7 @@
         <nav class="nav">
             <div class="logo__container">
                 <a href="./index.php">
-                    <img src="./assets/images/logo.png" alt="logo of e-spiritueux" class="logo__img">
+                    <img src="./assets/images/logo_black.png" alt="logo of e-spiritueux" class="logo__img">
                 </a>
             </div>
             <ul class="nav__list">

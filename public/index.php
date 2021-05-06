@@ -13,6 +13,7 @@
     <!-- specific styles -->
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <title>WineShop</title>
 </head>
 <body>

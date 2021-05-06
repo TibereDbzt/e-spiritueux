@@ -34,7 +34,7 @@
                 
                 require MODEL_PATH . 'Product.model.php';
 
-                var_dump(WineModel::getAllProducts());
+                var_dump(ProductModel::getAllProducts());
             ?>
         </main>
 

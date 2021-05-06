@@ -1,0 +1,33 @@
+.footer {
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 8rem 0;
+}
+
+.footer .logo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.footer__logo {
+    width: 40px;
+    height: auto;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__infos {
+    flex-grow: 1;
+    display: flex;
+    text-transform: uppercase;
+}
+
+.table {
+    margin-right: 10rem;
+}
