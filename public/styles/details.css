@@ -1,1 +1,78 @@
 /* styles d'une fiche produit
+
+ */
+.padding_layout_1 {
+    padding-top: 120px;
+    padding-bottom: 115px;
+    width: 95%;
+}
+
+.product-heading {
+
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.product-heading h2 {
+    font-size: 25px;
+    color: #181818;
+    padding-bottom: 20px;
+    margin: 0;
+    font-weight: 600;
+    text-transform: none;
+}
+.product-info {
+    padding-top: 10px;
+}
+.product-info h5 {
+    font-family: 'Sackers Light';
+    font-size: 1rem;
+    line-height: 20px;
+
+}
+
+.product-detail-side {
+    text-align: right;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 0;
+}
+
+.product-detail-side span {
+    font-size: 24px;
+    font-weight: 300;
+    margin-right: 15px;
+    padding: 20px;
+
+}
+.product-detail-side span.price {
+    font-size: 20px;
+    color: #222;
+    font-weight: 400;
+}
+.detail-contant {
+    text-align: left;
+    padding: 35px 0;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+
+.cart .quantity {
+    margin-top: 40px;
+    float: left;
+    margin-right: 40px;
+    font-size: 20px;
+
+}
+
+.btn {
+    margin-top: 35px;
+    border-color: #000;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 10px 15px;
+
+
+}
+
