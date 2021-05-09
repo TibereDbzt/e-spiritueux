@@ -1,5 +1,3 @@
-<!-- static class to be used to connect to the database -->
-
 <?php
 
 require(CONF_PATH . 'Database.php');

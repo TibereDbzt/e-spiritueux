@@ -10,4 +10,6 @@
 
     CartController::addToCart($cart_item);
 
+    var_dump($_SESSION['cart']);
+
 ?>
