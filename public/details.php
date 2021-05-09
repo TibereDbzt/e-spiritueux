@@ -104,7 +104,8 @@
                 <p><?php echo $description ?><br>
                 </p>
             </div>
-            <form class="cart" method="post" action="cart.html">
+            <form class="cart" method="post" action="addToCart.php">
+                <input name="productID" value="<?php echo $id ?>" type="hidden">
                 <div class="quantity">
                     <input step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
                 </div>

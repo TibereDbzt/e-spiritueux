@@ -1,3 +1,19 @@
+<?php
+
+    require_once './../app/app.php';
+
+    require_once MODEL_PATH . 'Product.model.php';
+
+    $productID = $_POST['productID'];
+    $quantity = $_POST['quantity'];
+    $cart_item = array('productID' => $productID, 'quantity' => $quantity);
+
+    if (!isset($_SESSION['cart'])) $_SESSION['cart'] = array();
+    
+    array_push($_SESSION['cart'], $cart_item);
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
