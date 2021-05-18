@@ -1,3 +1,9 @@
+<!--
+	detail.php
+	Page d'affichage d'un produit sélectioner avec grosse description et plusieurs photos
+	@author équipe e-spiritueux
+	@date 13/05/2021
+-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -64,7 +70,7 @@
                 <div class='hizoom hi2'> <img src="../data/images/<?php echo $imageName ?>.png" alt="#" /> </div>
             </div>
             <!-- Image Slider -->
-            
+
 
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -115,6 +121,11 @@
     </div>
 
     <!-- load bootstrap scripts -->
+    <!-- Chargement JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
