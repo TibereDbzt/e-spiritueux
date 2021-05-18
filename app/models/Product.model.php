@@ -79,6 +79,10 @@ class ProductModel {
         return $this->productDescription;
     }
 
+    public function getShortDescription() {
+        return substr($this->productDescription, 0, 130) . '...';
+    }
+
     public function getImageName() {
         return $this->productImageName;
     }

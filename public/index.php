@@ -5,6 +5,8 @@
 
     $categories = CategoryModel::getAllCategories();
 
+    session_start();
+
 ?>
 
 <!DOCTYPE html>
