@@ -1,3 +1,9 @@
+<!--
+    footer.php
+    ///////ajouter description/////
+    @author équipe e-spiritueux
+    @date 13/05/2021
+-->
 <footer class="footer">
     <div class="wrapper footer__inner">
         <div class="logo__container">

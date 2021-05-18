@@ -1,3 +1,9 @@
+<!--
+    cart.php
+    ajouter description
+    @author équipe e-spiritueux
+    @date 14/05/2021
+-->
 <?php
 
     require_once './../app/app.php';

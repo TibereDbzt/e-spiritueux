@@ -1,3 +1,9 @@
+<!--
+    header.php
+    ///////ajouter description/////
+    @author équipe e-spiritueux
+    @date 13/05/2021
+-->
 <header class="header">
     <div class="wrapper">
         <nav class="nav">

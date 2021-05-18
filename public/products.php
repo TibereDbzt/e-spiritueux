@@ -1,3 +1,9 @@
+<!--
+    products.php
+    ///////ajouter description/////
+    @author équipe e-spiritueux
+    @date 18/05/2021
+-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
