@@ -12,4 +12,7 @@
 
     var_dump($_SESSION['cart']);
 
+    $referer = $_SERVER['HTTP_REFERER'];
+    header("Location: $referer");
+
 ?>

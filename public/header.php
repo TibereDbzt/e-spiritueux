@@ -4,7 +4,7 @@
     @author équipe e-spiritueux
     @date 13/05/2021
 -->
-<header class="header">
+<header class="page-header">
     <div class="wrapper">
         <nav class="nav">
             <div class="logo__container">

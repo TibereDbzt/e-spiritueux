@@ -59,6 +59,10 @@ class ProductModel {
         return $this->categoryID;
     }
 
+    public function getCategoryName() {
+        return CategoryModel::getCategoryById($this->getCategoryId())->getCategoryName();
+    }
+
     public function getOrigin() {
         return $this->productOrigin;
     }
