@@ -95,6 +95,14 @@
     background-position: 50% 50%;
     border: none;
     border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+
+.search__result-sentence {
+    font-family: 'SangBleu';
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 4rem;
 }
 
 .categories__form {

@@ -19,6 +19,7 @@
     if (!empty($_GET['search'])) {
         $keywords = $_GET['search'];
         $products = ProductModel::filterByKeyword($keywords);
+        $products ? $nbOfResults = count($products) : $nbOfResults = 0;
     }
 
 ?>
@@ -62,7 +63,7 @@
                     <form class="search__form" action="./products.php" method="GET">
                         <label class="search__label" for="search">rechercher un produit</label>
                         <div class="search__box">
-                            <input class="search__input" id="search" type="text" placeholder="belvedere" name="search">
+                            <input class="search__input" id="search" type="text" placeholder="belvedere" name="search" value="<?php echo $keywords; ?>">
                             <input class="search__submit" type="submit" value="">
                         </div>
                     </form>
@@ -82,6 +83,10 @@
 
             <div class="products">
                 <?php
+
+                    if (isset($keywords)) {
+                        echo '<p class="search__result-sentence">' . $nbOfResults . ' produits trouvés pour "' . $keywords . '".</p>';
+                    }
                     
                     foreach ($products as $product) {
                         echo '<a class="product link-target" href="./details.php?id=' . $product->getId() . '">';
@@ -95,7 +100,7 @@
                                     echo '<span class="keyword-separator"></span>';
                                     echo '<div class="product__detail">' . $product->getVolume() . 'cl</div>';
                                     echo '<span class="keyword-separator"></span>';
-                                    echo '<div class="product__detail">' . $product->getAlcoholLevel() . '%vol</div>';
+                                    echo '<div class="product__detail">' . $product->getAlcoholLevel() . '% vol</div>';
                                     echo '<div class="product__price">' . $product->getPrice() . '€</div>';
                                 echo '</div>';
                                 echo '<p class="product__description">' . $product->getShortDescription() . '</p>';
