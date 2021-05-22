@@ -1,6 +1,6 @@
 <!--
     index.php
-    ///////ajouter description/////
+    page d'accueil
     @author équipe e-spiritueux
     @date 13/05/2021
 -->
@@ -44,17 +44,15 @@
         <main class="content">
             <section class="hero">
                 <h1 class="site-name">e-spiritueux</h1>
-                <p>découvrez nos vins Grands Crus</p>
+                <p>Découverte de nouvelles saveurs aux 4 coins du monde avec nos spiritueux</p>
             </section>
 
             <section class="section about-us">
                 <h2 class="section__title">à propos</h2>
                 <div class="section__content">
-                    <p class="section__description">Le choix des parcelles est effectué avec le plus grand soin. Une fois sélectionnées, celles-ci sont suivies avec une attention toute particulière, dans le plus grand respect de la Nature.
-                    Culture, biodynamie, analyse des sols et du végétal, protection des vignes mais aussi vinification... Les vins que nous proposons sont la fidèle incarnation de notre philosophie.
-                    Nous avons choisi d’offrir l’excellence — et comme l’orfèvre devant son ouvrage, chaque détail a été examiné, pesé et affiné avec exigence et précision.</p>
+                    <p class="section__description">Simple amateur ou connaisseur, partez à la découverte de nouvelles saveurs aux 4 coins du monde avec nos spiritueux : whisky, gin, rhum et vodka. Découvrez sans attendre notre gamme de whisky single malt et de rhums ambrés au travers de distilleries emblématiques telles que Lagavulin, Talisker ou Clément.</p>
                     <div class="image__container">
-                        <img class="grape-image" src="./assets/images/grape.png" alt="grape">
+                        <img class="grape-image" src="./assets/images/bg0.png" alt="grape">
                     </div>
                 </div>
             </section>

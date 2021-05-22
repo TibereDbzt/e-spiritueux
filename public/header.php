@@ -1,6 +1,6 @@
 <!--
     header.php
-    ///////ajouter description/////
+    entête de tous les pages
     @author équipe e-spiritueux
     @date 13/05/2021
 -->
