@@ -33,7 +33,7 @@
     <!-- specific styles -->
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/cart.css">
-    <title>WineShop</title>
+    <title>Panier&nbsp;&nbsp;&mdash;&nbsp;&nbsp;WineShop</title>
 </head>
 <body>
 

@@ -47,6 +47,12 @@ class ProductModel {
         return $products[0];
     }
 
+    public static function filterByCategoryID($products, $categoryID) {
+        return array_filter($products, function($product) use($categoryID) {
+            return $product->getCategoryId() == $categoryID;
+        });
+    }
+
     public function getId() {
         return $this->productID;
     }

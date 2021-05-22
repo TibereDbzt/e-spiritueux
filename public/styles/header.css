@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     z-index: 1000;
+    pointer-events: none;
 }
 
 .nav {
@@ -16,9 +17,14 @@
     justify-content: space-between;
 }
 
+.nav .logo__container {
+    pointer-events: all;
+}
+
 .nav__list {
     display: flex;
     align-items: center;
+    pointer-events: all;
 }
 
 .nav__entry {
@@ -36,6 +42,10 @@
     padding: 1rem 1.4rem;
 }
 
+.nav__link:last-of-type {
+    padding-right: 0;
+}
+
 .nav__link::after {
     display: block;
     content: '';
@@ -46,12 +56,12 @@
     height: 5px;
     border-radius: 50%;
     background: black;
-    transform: translate3d(-3px, 20px, 0);
+    transform: translate3d(6px, 20px, 0);
     opacity: 0;
     transition: all 0.2s ease-out;
 }
 
 .nav__link:hover::after {
-    transform: translate3d(-3px, 0, 0);
+    transform: translate3d(6px, 0, 0);
     opacity: 1;
 }

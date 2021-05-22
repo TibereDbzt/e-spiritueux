@@ -1,13 +1,18 @@
 <?php
 
-require_once './../app/app.php';
+    require_once './../app/app.php';
 
-getDebug();
+    require MODEL_PATH . 'Product.model.php';
+    require MODEL_PATH . 'Category.model.php';
 
-require MODEL_PATH . 'Product.model.php';
-require MODEL_PATH . 'Category.model.php';
+    $products = ProductModel::getAllProducts();
+    $categories = CategoryModel::getAllCategories();
+    $categoryID = "";
 
-$products = ProductModel::getAllProducts();
+    if (!empty($_GET['categoryID'])) {
+        $categoryID = $_GET['categoryID'];
+        $products = ProductModel::filterByCategoryID($products, $categoryID);
+    }
 
 ?>
 
@@ -17,7 +22,6 @@ $products = ProductModel::getAllProducts();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- load bootstrap styles -->
     <!-- load a reset file to standardize browsers -->
     <link rel="stylesheet" href="./styles/reset.css">
     <!-- generic styles -->
@@ -25,7 +29,7 @@ $products = ProductModel::getAllProducts();
     <!-- specific styles -->
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/products.css">
-    <title>WineShop</title>
+    <title>Produits&nbsp;&nbsp;&mdash;&nbsp;&nbsp;WineShop</title>
 </head>
 <body>
 
@@ -35,7 +39,7 @@ $products = ProductModel::getAllProducts();
 
     <div class="wrapper">
 
-        <main class="content">
+        <main class="content products-page">
 
             <header class="header">
                 <h2 class="header__title">découvrez tous nos produits</h2>
@@ -45,6 +49,19 @@ $products = ProductModel::getAllProducts();
                 </div>
                 <p class="header__description">Tous nos produits sont certifiés cuite assurée  et sont le fruit d’une sélection dans les quatre coins du monde des mielleures fermes agricoles.</p>
             </header>
+
+            <div class="categories">
+                <form class="categories__form" action="./products.php" method="GET">
+                    <button class="categories__entry <?php if (strlen($categoryID) === 0) echo 'selected' ?>">tous</button>
+
+                    <?php
+                        foreach ($categories as $category) {
+                            echo '<button class="categories__entry ' . $category->addClassIfSelected($categoryID) .'" name="categoryID" value="' . $category->getCategoryId() . '">' . $category->getCategoryName() . '</button>';
+                        }
+                    ?>
+                    
+                </form>
+            </div>
 
             <div class="products">
                 <?php
@@ -64,6 +81,7 @@ $products = ProductModel::getAllProducts();
                                     echo '<div class="product__detail">' . $product->getAlcoholLevel() . '%vol</div>';
                                     echo '<div class="product__price">' . $product->getPrice() . '€</div>';
                                 echo '</div>';
+                                echo '<p class="product__description">' . $product->getShortDescription() . '</p>';
                                 echo '<div class="product__button-container">';
                                     echo '<div class="button">';
                                         echo '<span class="button__arrow"></span>';
