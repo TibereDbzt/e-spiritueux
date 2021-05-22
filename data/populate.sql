@@ -1,5 +1,5 @@
-DROP TABLE categories;
-DROP TABLE products;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS categories;
 
 CREATE TABLE categories (
     categoryID INTEGER AUTO_INCREMENT,
@@ -18,8 +18,9 @@ CREATE TABLE products (
     productDescription VARCHAR(500) NOT NULL,
     productImageName VARCHAR(15) NOT NULL,
     CONSTRAINT pk_products PRIMARY KEY (productID),
-    CONSTRAINT fk_categories FOREIGN KEY (categoryID) REFERENCES categories(categoryID)
-);
+    CONSTRAINT fk_categories FOREIGN KEY (categoryID) REFERENCES categories(categoryID),
+    FULLTEXT (productName, productDescription)
+) ENGINE=MyISAM;
 
 INSERT INTO categories(categoryName) VALUES ('Whisky');
 INSERT INTO categories(categoryName) VALUES ('Cognac');

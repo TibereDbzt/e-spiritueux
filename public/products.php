@@ -14,6 +14,11 @@
         $products = ProductModel::filterByCategoryID($products, $categoryID);
     }
 
+    if (!empty($_GET['search'])) {
+        $keywords = $_GET['search'];
+        $products = ProductModel::filterByKeyword($keywords);
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -50,17 +55,27 @@
                 <p class="header__description">Tous nos produits sont certifiés cuite assurée  et sont le fruit d’une sélection dans les quatre coins du monde des mielleures fermes agricoles.</p>
             </header>
 
-            <div class="categories">
-                <form class="categories__form" action="./products.php" method="GET">
-                    <button class="categories__entry <?php if (strlen($categoryID) === 0) echo 'selected' ?>">tous</button>
+            <div class="filters">
+                <div class="filters__forms">
+                    <form class="search__form" action="./products.php" method="GET">
+                        <label class="search__label" for="search">rechercher un produit</label>
+                        <div class="search__box">
+                            <input class="search__input" id="search" type="text" placeholder="belvedere" name="search">
+                            <input class="search__submit" type="submit" value="">
+                        </div>
+                    </form>
+                    <form class="categories__form" action="./products.php" method="GET">
+                        <label for="">catégories</label>
+                        <button class="categories__entry <?php if (strlen($categoryID) === 0) echo 'selected' ?>">tous</button>
 
-                    <?php
-                        foreach ($categories as $category) {
-                            echo '<button class="categories__entry ' . $category->addClassIfSelected($categoryID) .'" name="categoryID" value="' . $category->getCategoryId() . '">' . $category->getCategoryName() . '</button>';
-                        }
-                    ?>
-                    
-                </form>
+                        <?php
+                            foreach ($categories as $category) {
+                                echo '<button class="categories__entry ' . $category->addClassIfSelected($categoryID) .'" name="categoryID" value="' . $category->getCategoryId() . '">' . $category->getCategoryName() . '</button>';
+                            }
+                        ?>
+                        
+                    </form>
+                </div>
             </div>
 
             <div class="products">
