@@ -22,11 +22,11 @@ CREATE TABLE products (
     FULLTEXT (productName, productDescription)
 ) ENGINE=MyISAM;
 
-INSERT INTO categories(categoryName) VALUES ('Whisky');
-INSERT INTO categories(categoryName) VALUES ('Cognac');
-INSERT INTO categories(categoryName) VALUES ('Rhum');
-INSERT INTO categories(categoryName) VALUES ('Gin');
-INSERT INTO categories(categoryName) VALUES ('Vodka');
+INSERT INTO categories(categoryName) VALUES ('whisky');
+INSERT INTO categories(categoryName) VALUES ('cognac');
+INSERT INTO categories(categoryName) VALUES ('rhum');
+INSERT INTO categories(categoryName) VALUES ('gin');
+INSERT INTO categories(categoryName) VALUES ('vodka');
 
 INSERT INTO products(productName, categoryID, productOrigin, productPrice, productVolume, productAlcoholLevel, productDescription, productImageName) VALUES (
     'whisky mac namara',

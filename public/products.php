@@ -9,9 +9,11 @@
     $categories = CategoryModel::getAllCategories();
     $categoryID = "";
 
-    if (!empty($_GET['categoryID'])) {
-        $categoryID = $_GET['categoryID'];
-        $products = ProductModel::filterByCategoryID($products, $categoryID);
+    if (!empty($_GET['category'])) {
+        $categoryID = $_GET['category'];
+        // choose one of two methods : SQL request all product and then filter in PHP  OR  SQL request for single category
+        // $products = ProductModel::filterByCategoryID($products, $categoryID);
+        $products = ProductModel::getProductsByCategoryName($categoryID);
     }
 
     if (!empty($_GET['search'])) {
@@ -70,7 +72,7 @@
 
                         <?php
                             foreach ($categories as $category) {
-                                echo '<button class="categories__entry ' . $category->addClassIfSelected($categoryID) .'" name="categoryID" value="' . $category->getCategoryId() . '">' . $category->getCategoryName() . '</button>';
+                                echo '<button class="categories__entry ' . $category->addClassIfSelected($categoryID) .'" name="category" value="' . $category->getCategoryName() . '">' . $category->getCategoryName() . '</button>';
                             }
                         ?>
                         

@@ -53,6 +53,18 @@ class ProductModel {
         });
     }
 
+    public static function getProductsByCategoryName($category) {
+        $request = Model::$pdo->prepare("SELECT productID, productName, products.categoryID, productOrigin, productPrice, productVolume, productAlcoholLevel, productDescription, productImageName FROM products JOIN categories ON products.categoryID = categories.categoryID WHERE categoryName = :name");
+        $values = array(
+            'name' => $category
+        );
+        $request->execute($values);
+        $request->setFetchMode(PDO::FETCH_CLASS, 'ProductModel');
+        $products = $request->fetchAll();
+        if (empty($products)) return false;
+        return $products;
+    }
+
     public static function filterByKeyword($keywords) {
         $request = Model::$pdo->prepare("SELECT * FROM products WHERE MATCH(productName, productDescription) AGAINST (:keywords IN NATURAL LANGUAGE MODE)");
         $values = array(
@@ -63,7 +75,6 @@ class ProductModel {
         $products = $request->fetchAll();
         if (empty($products)) return false;
         return $products;
-        // var_dump($keywords);
     }
 
     public function getId() {
