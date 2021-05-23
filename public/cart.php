@@ -49,7 +49,7 @@
 
     <div class="wrapper">
 
-        <main class="content">
+        <main class="content cart-page">
             <h2 class="section__title">votre panier</h2>
 
             <?php

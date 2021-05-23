@@ -37,6 +37,7 @@
     <!-- specific styles -->
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/products.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <title>Produits&nbsp;&nbsp;&mdash;&nbsp;&nbsp;WineShop</title>
 </head>
 <body>
@@ -68,15 +69,15 @@
                         </div>
                     </form>
                     <form class="categories__form" action="./products.php" method="GET">
-                        <label for="">catégories</label>
-                        <button class="categories__entry <?php if (strlen($categoryName) === 0) echo 'selected' ?>">tous</button>
-
-                        <?php
-                            foreach ($categories as $category) {
-                                echo '<button class="categories__entry ' . $category->addClassIfSelected($categoryName) .'" name="category" value="' . $category->getCategoryName() . '">' . $category->getCategoryName() . '</button>';
-                            }
-                        ?>
-                        
+                        <div class="categories__label">catégories</div>
+                        <div class="categories__list">
+                            <button class="categories__entry <?php if (strlen($categoryName) === 0) echo 'selected' ?>">tous</button>
+                            <?php
+                                foreach ($categories as $category) {
+                                    echo '<button class="categories__entry ' . $category->addClassIfSelected($categoryName) .'" name="category" value="' . $category->getCategoryName() . '">' . $category->getCategoryName() . '</button>';
+                                }
+                            ?>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -120,5 +121,9 @@
 
     </div>
 
+    <?php
+        require_once './footer.php';
+    ?>
+    
 </body>
 </html>

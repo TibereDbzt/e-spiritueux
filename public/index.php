@@ -52,7 +52,7 @@
                 <div class="section__content">
                     <p class="section__description">Simple amateur ou connaisseur, partez à la découverte de nouvelles saveurs aux 4 coins du monde avec nos spiritueux : whisky, gin, rhum et vodka. Découvrez sans attendre notre gamme de whisky single malt et de rhums ambrés au travers de distilleries emblématiques telles que Lagavulin, Talisker ou Clément.</p>
                     <div class="image__container">
-                        <img class="grape-image" src="./assets/images/bg0.png" alt="grape">
+                        <img class="glass-image" src="./assets/images/bg0.png" alt="grape">
                     </div>
                 </div>
             </section>

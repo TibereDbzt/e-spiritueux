@@ -1,5 +1,16 @@
 /* styles de la page panier */
 
+.cart-page {
+    display: grid;
+    grid-template-columns: 5fr 300px;
+    grid-template-rows: 1fr 1fr auto;
+    column-gap: 10%;
+}
+
+.cart-page .section__title {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
 .cart-item {
     display: flex;
     justify-content: space-between;
@@ -41,10 +52,7 @@
 }
 
 .cart-resume {
-    position: fixed;
-    top: 400px;
-    right: 0;
-    margin-right: 8rem;
+    height: fit-content;
     border: 1px solid black;
 }
 

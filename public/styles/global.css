@@ -34,6 +34,14 @@ html {
 	font-size: 14px;
 }
 
+@media all and (max-width: 900px) {
+
+    /* html {
+		font-size: 12px;
+	} */
+
+}
+
 body {
 	width: 100%;
 	min-height: 100vh;
@@ -48,8 +56,8 @@ body {
     box-sizing: border-box;
     /* padding-left: calc(50% - var(--container) / 2);
     padding-right: calc(50% - var(--container) / 2); */
-    /* padding-left: 80px;
-    padding-right: 80px; */
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .content {
