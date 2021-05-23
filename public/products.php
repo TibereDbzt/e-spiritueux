@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/products.css">
     <link rel="stylesheet" href="./styles/footer.css">
-    <title>Produits&nbsp;&nbsp;&mdash;&nbsp;&nbsp;WineShop</title>
+    <title>Produits&nbsp;&nbsp;&mdash;&nbsp;&nbsp;espiritueux</title>
 </head>
 <body>
 

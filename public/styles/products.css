@@ -112,6 +112,11 @@
     margin: 3rem 0;
 }
 
+.categories__list {
+    display: flex;
+    flex-direction: column;
+}
+
 .categories__entry {
     background: transparent;
     border: none;
@@ -244,6 +249,11 @@
 
     .categories__form {
         width: 100%;
+    }
+
+    .categories__list {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .categories__label {

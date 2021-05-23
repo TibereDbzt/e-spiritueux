@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/footer.css">
-    <title>Accueil&nbsp;&nbsp;&mdash;&nbsp;&nbsp;WineShop</title>
+    <title>Accueil&nbsp;&nbsp;&mdash;&nbsp;&nbsp;espiritueux</title>
 </head>
 <body>
 

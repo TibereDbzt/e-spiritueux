@@ -39,7 +39,7 @@
     <!-- specific styles -->
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/cart.css">
-    <title>Panier&nbsp;&nbsp;&mdash;&nbsp;&nbsp;WineShop</title>
+    <title>Panier&nbsp;&nbsp;&mdash;&nbsp;&nbsp;espiritueux</title>
 </head>
 <body>
 
