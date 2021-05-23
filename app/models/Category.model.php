@@ -42,8 +42,8 @@ class CategoryModel {
         return $this->categoryName;
     }
 
-    public function addClassIfSelected($categoryID) {
-        if ($this->categoryID != $categoryID) return "";
+    public function addClassIfSelected($categoryName) {
+        if ($this->categoryName != $categoryName) return "";
         return "selected";
     }
     

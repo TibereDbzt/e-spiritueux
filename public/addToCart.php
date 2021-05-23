@@ -4,13 +4,20 @@
     
     require_once CTRL_PATH . 'Cart.controller.php';
 
+    getDebug();
+    
     $productID = $_POST['productID'];
-    $quantity = $_POST['quantity'];
-    $cart_item = array('productID' => $productID, 'quantity' => $quantity);
+    $quantity = (int)$_POST['quantity'];
 
-    CartController::addToCart($cart_item);
+    $matchingCartItem = CartController::getItemByProductID($productID);
 
-    var_dump($_SESSION['cart']);
+    // var_dump($matchingCartItem);
+
+    // if ($matchingCartItem) CartController::addQuantity($productID, $quantity);
+    // else CartController::addToCart(array('productID' => $productID, 'quantity' => $quantity));
+
+    if (!$matchingCartItem) CartController::addToCart(array('productID' => $productID, 'quantity' => $quantity));
+    else CartController::addQuantity($productID, $quantity);
 
     $referer = $_SERVER['HTTP_REFERER'];
     header("Location: $referer");

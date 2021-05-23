@@ -10,13 +10,19 @@
 
     getDebug();
 
+    // session_unset();
+
     require_once MODEL_PATH . 'Product.model.php';
     require_once CTRL_PATH . 'Cart.controller.php';
 
     $items = CartController::getAllItems();
-    $totalPrice = CartController::getTotalPrice($items);
-    $totalQuantity = CartController::getTotalQuantity($items);
-    $msgEmptyCart = 'Votre panier est vide';
+
+    if ($items !== false) {
+        $totalPrice = CartController::getTotalPrice($items);
+        $totalQuantity = CartController::getTotalQuantity($items);
+    } else {
+        $msgEmptyCart = 'Votre panier est vide';
+    }
 
 ?>
 
@@ -48,7 +54,7 @@
 
             <?php
 
-                if (!$items) echo $msgEmptyCart;
+                if (!$items) echo '<p>' . $msgEmptyCart . '</p>';
                 else {
                     foreach ($items as $item) {
                         echo '<div class="cart-item">';
@@ -56,17 +62,24 @@
                         echo '<div class="cart-item__text"><h4 class="cart-item__name">'. $item['product']->getName() . '</h4>';
                         echo '<p class="cart-item__desc">' . $item['product']->getShortDescription() . '</p></div>';
                         echo '<div class="cart-item__data"><div class="cart-item__price">' . $item['product']->getPrice() .'€</div>';
-                        echo '<div class="cart-item__quantity">x' . $item['quantity'] . '</div></div></div>';
+                        echo '<div class="cart-item__quantity">x' . $item['quantity'] . '</div>';
+                        echo '<form action="./removeFromCart.php" method="POST">';
+                        echo '<input type="hidden" name="productID" value="' . $item['product']->getId() . '">';
+                        echo '<button type="submit">supprimer du panier</button>';
+                        echo '</form>';
+                        echo '</div></div>';
                     }
                 }
 
-            ?>
+                if ($items) {
+                    echo '<div class="cart-resume">';
+                    echo '<p class="cart-resume__nbOfProducts">Votre panier contient ' . $totalQuantity . ' produits</p>';
+                    echo '<p class="cart-resume__price">Pour un total de ' . $totalPrice . '€</p>';
+                    echo '<a href="#" class="btn btn-submit">Passer votre commande</a>';
+                    echo '</div>';
+                }
 
-            <div class="cart-resume">
-                <p class="cart-resume__nbOfProducts">Votre panier contient <?php echo $totalQuantity ?> produits</p>
-                <p class="cart-resume__price">Pour un total de <?php echo $totalPrice ?>€</p>
-                <a href="#" class="btn btn-submit">Passer votre commande</a>
-            </div>
+            ?>
 
         </main>
 

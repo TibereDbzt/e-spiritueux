@@ -7,13 +7,13 @@
 
     $products = ProductModel::getAllProducts();
     $categories = CategoryModel::getAllCategories();
-    $categoryID = "";
+    $categoryName = "";
 
     if (!empty($_GET['category'])) {
-        $categoryID = $_GET['category'];
+        $categoryName = $_GET['category'];
         // choose one of two methods : SQL request all product and then filter in PHP  OR  SQL request for single category
         // $products = ProductModel::filterByCategoryID($products, $categoryID);
-        $products = ProductModel::getProductsByCategoryName($categoryID);
+        $products = ProductModel::getProductsByCategoryName($categoryName);
     }
 
     if (!empty($_GET['search'])) {
@@ -69,11 +69,11 @@
                     </form>
                     <form class="categories__form" action="./products.php" method="GET">
                         <label for="">catégories</label>
-                        <button class="categories__entry <?php if (strlen($categoryID) === 0) echo 'selected' ?>">tous</button>
+                        <button class="categories__entry <?php if (strlen($categoryName) === 0) echo 'selected' ?>">tous</button>
 
                         <?php
                             foreach ($categories as $category) {
-                                echo '<button class="categories__entry ' . $category->addClassIfSelected($categoryID) .'" name="category" value="' . $category->getCategoryName() . '">' . $category->getCategoryName() . '</button>';
+                                echo '<button class="categories__entry ' . $category->addClassIfSelected($categoryName) .'" name="category" value="' . $category->getCategoryName() . '">' . $category->getCategoryName() . '</button>';
                             }
                         ?>
                         
