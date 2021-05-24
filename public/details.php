@@ -47,6 +47,8 @@
     <!-- specific styles -->
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/details.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="shortcut icon" href="./assets/images/logo_black.png" type="image/x-icon">
     <title><?php echo $name ?>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;espiritueux</title>
 </head>
 <body>
@@ -62,10 +64,10 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="../data/images/<?php echo $imageName ?>.png"" alt="First slide">
+                            <img class="d-block w-100" src="./assets/images/<?php echo $imageName ?>.png"" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="../data/images/<?php echo $imageName ?>_2.png"" alt="Second slide">
+                            <img class="d-block w-100" src="./assets/images/<?php echo $imageName ?>_2.png"" alt="Second slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -107,6 +109,10 @@
             </div>
         </div>
     </div>
+
+    <?php
+        require_once './footer.php';
+    ?>
 
     <!-- load bootstrap scripts -->
     <!-- Chargement JavaScript -->

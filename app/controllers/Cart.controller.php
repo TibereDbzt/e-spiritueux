@@ -41,6 +41,10 @@ class CartController {
         return $items;
     }
 
+    public static function getNbOfProducts() {
+        return sizeof(self::getCart());
+    }
+
     public static function getTotalPrice($listProductQuantity) {
         $totalPrice = 0;
         foreach ($listProductQuantity as $item) {

@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/products.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="shortcut icon" href="./assets/images/logo_black.png" type="image/x-icon">
     <title>Produits&nbsp;&nbsp;&mdash;&nbsp;&nbsp;espiritueux</title>
 </head>
 <body>

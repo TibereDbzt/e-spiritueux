@@ -10,8 +10,6 @@
 
     getDebug();
 
-    // session_unset();
-
     require_once MODEL_PATH . 'Product.model.php';
     require_once CTRL_PATH . 'Cart.controller.php';
 
@@ -39,6 +37,8 @@
     <!-- specific styles -->
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/cart.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="shortcut icon" href="./assets/images/logo_black.png" type="image/x-icon">
     <title>Panier&nbsp;&nbsp;&mdash;&nbsp;&nbsp;espiritueux</title>
 </head>
 <body>
@@ -65,7 +65,7 @@
                         echo '<div class="cart-item__quantity">x' . $item['quantity'] . '</div>';
                         echo '<form action="./removeFromCart.php" method="POST">';
                         echo '<input type="hidden" name="productID" value="' . $item['product']->getId() . '">';
-                        echo '<button type="submit">supprimer du panier</button>';
+                        echo '<button class="btn btn-small" type="submit">supprimer</button>';
                         echo '</form>';
                         echo '</div></div>';
                     }
@@ -73,8 +73,7 @@
 
                 if ($items) {
                     echo '<div class="cart-resume">';
-                    echo '<p class="cart-resume__nbOfProducts">Votre panier contient ' . $totalQuantity . ' produits</p>';
-                    echo '<p class="cart-resume__price">Pour un total de ' . $totalPrice . '€</p>';
+                    echo '<p class="cart-resume__text">Votre panier contient ' . $totalQuantity . ' produits, pour un total de ' . $totalPrice . '€</p>';
                     echo '<a href="#" class="btn btn-submit">Passer votre commande</a>';
                     echo '</div>';
                 }
@@ -84,5 +83,10 @@
         </main>
 
     </div>
+
+    <?php
+        require_once './footer.php';
+    ?>
+
 </body>
 </html>

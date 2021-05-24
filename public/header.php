@@ -4,6 +4,17 @@
     @author équipe e-spiritueux
     @date 13/05/2021
 -->
+
+<?php
+
+require_once './../app/app.php';
+
+require_once CTRL_PATH . 'Cart.controller.php';
+
+$nbOfProducts = CartController::getNbOfProducts();
+
+?>
+
 <header class="page-header">
     <div class="wrapper">
         <nav class="nav">
@@ -20,7 +31,9 @@
                     <a class="nav__link" href="./products.php">produits</a>
                 </li>
                 <li class="nav__entry">
-                    <a class="nav__link" href="./cart.php">panier</a>
+                    <a class="nav__link" href="./cart.php">panier
+                    <span class="cart__nbOfProducts "><?php echo $nbOfProducts ?></span>
+                    </a>
                 </li>
             </ul>
         </nav>

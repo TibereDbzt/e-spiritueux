@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="shortcut icon" href="./assets/images/logo_black.png" type="image/x-icon">
     <title>Accueil&nbsp;&nbsp;&mdash;&nbsp;&nbsp;espiritueux</title>
 </head>
 <body>
@@ -62,7 +63,7 @@
                 <div class="section__content">
                     <?php
                         foreach ($categories as $category) {
-                            echo '<a href="./products.php?categoryID=' . $category->getCategoryId() . '"/>';
+                            echo '<a class="btn" href="./products.php?categoryID=' . $category->getCategoryId() . '"/>';
                             echo '<div class="category__box">';
                             echo '<h3 class="category__name">' . $category->getCategoryName() . '</h3>';
                             echo '</div>';
